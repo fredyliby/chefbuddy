@@ -1,0 +1,6 @@
+ Page for recipe#index
+ 
+ <%= @recipes.each do |recipe| %>
+
+  <h2 class="title"><%= link_to recipe.title,recipe %></h2>
+ <% end %>
