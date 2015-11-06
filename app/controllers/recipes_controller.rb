@@ -1,9 +1,14 @@
 class RecipesController < ApplicationController
 	before_action :find_recipe, only: [:show,:edit,:update,:destroy]
 	def index
-		@recipes = Recipe.all.order("created_at DESC")
-
+		@recipes = Recipe.all.order('created_at DESC')		
+		@recipes = Recipe.all
 	end
+	def show
+		@recipe = Recipe.find(params[:id])
+		@recipes = Recipe.all
+	end
+
 
 	def new
 		@recipe = Recipe.new
@@ -20,11 +25,7 @@ class RecipesController < ApplicationController
 		end
 	end
 
-	def show
-		@recipe = Recipe.find(params[:id])
-		@recipes = Recipe.all
-
-	end
+	
 
 	def edit
 

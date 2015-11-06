@@ -1,6 +1,11 @@
  Page for recipe#index
 
- <%= @recipes.each do |recipe| %>
-
-  <h2 class="title"><%= link_to recipe.title, recipe %></h2>
+ <% @recipes.each do |recipe| %>
+	<div class="row">
+ 	<div class="col-sm-4">
+ 	<%= link_to	 (image_tag recipe.image.url(:medium, class: "recipe_image")) %>
+    <h4 class="title"><%= link_to recipe.title,recipe %></h4>
+ 	</div>
+  </div>
+  
  <% end %>
