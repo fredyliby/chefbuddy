@@ -25,6 +25,7 @@ gem 'simple_form', '~> 3.2'
 gem 'paperclip', '~> 4.3'
 gem 'cocoon', '~> 1.2', '>= 1.2.6'
 gem 'devise', '~> 3.5', '>= 3.5.2'
+gem 'mandrill-api'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 

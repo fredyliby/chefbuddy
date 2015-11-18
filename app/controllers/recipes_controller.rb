@@ -49,6 +49,44 @@ class RecipesController < ApplicationController
 		redirect_to root_path  
 	end
 
+	def mail
+		puts "EMAIL HERE"
+		puts params
+
+		recipe = Recipe.find(params[:recipe_id])
+		from = params[:email_from]
+		to = params[:email_to]
+		subject = params[:subject]
+
+		html = "<html><h1>Hi <strong> #{to} </strong>, how are you?</h1> <br/> <ul>"
+
+		recipe.ingredients.each do | i |
+			html+= "<li> #{i.name} </li>"
+		end
+
+		html += "</ul><br/><ul>"
+		
+		recipe.directions.each do | d |
+			html+= "<li> #{d.step} </li>"
+		end
+
+		html+= "</ul><br/> <h1> Enjoy Cooking!</h1></html>"
+
+		require 'mandrill'
+		msg = Mandrill::API.new
+		message = {
+			:subject=> subject,
+			:from_name=> from,
+			:text=> params[:directions],
+			:to=> [{:email=> to }],
+			:html=> html,
+			:from_email=> from
+		}
+		sending = msg.messages.send message 
+		puts sending
+		redirect_to root_path
+	end
+
 private
 	
 	def recipe_params
