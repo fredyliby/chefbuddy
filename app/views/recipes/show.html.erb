@@ -1,56 +1,51 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-4">
-			<div>
-				<h3><%= @recipe.title %></h3>
-				<%= link_to	(image_tag @recipe.image.url(:medium), class: "img-rounded", size: '300x150') %>
-			</div><br>
-			<%= link_to "Back", root_path, class: "btn btn-default" %>
-			<%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-default" %>
-			<%= link_to "Delete", recipe_path(@recipe), method: :delete, data: {confirm: "Are you sure?" },  
-			class: "btn btn-default" %>
-		</div>
-		<div class="col-sm-4">
-			<h3>INGREDIENTS</h3>
-			<ul>
-				<% @recipe.ingredients.each do |ingredient| %>
-				<li><%= ingredient.name %></li>
-				<% end %>
-			</ul>				
-		</div>
-		<div class="col-sm-4">
-			<h3>DIRECTIONS</h3>
-			<ul>
-				<% @recipe.directions.each do |direction| %>
-				<li><%= direction.step %></li>
-				<% end %>
-			</ul>
-		</div>
-
-
+				<div>
+					<h3><%= @recipe.title %></h3>
+					<%= link_to	(image_tag @recipe.image.url(:medium), class: "img-rounded", size: '300x150') %>
+					</div><br>
+					<%= link_to "Back", root_path, class: "btn btn-default" %>
+					<%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-default" %>
+					<%= link_to "Delete", recipe_path(@recipe), method: :delete, data: {confirm: "Are you sure?" },  
+					class: "btn btn-default" %>
+				</div>
+					<div class="col-sm-4">
+						<h3>INGREDIENTS</h3>
+							<ul>
+								<% @recipe.ingredients.each do |ingredient| %>
+								<li><%= ingredient.name %></li>
+								<% end %>
+							</ul>				
+					</div>
+						<div class="col-sm-4">
+							<h3>DIRECTIONS</h3>
+								<ul>
+									<% @recipe.directions.each do |direction| %>
+									<li><%= direction.step %></li>
+									<% end %>
+								</ul>
+						</div>
 	</div><br>
-	<div class="share-form">
-		<div class="col-md-6">
-			<h2>SHARE RECIPE</h2>
-
-			<%= form_tag("/mail", method: :post) do %> <br>
-
-			<div>
-				<label>Email from: 
-			<%= text_field_tag(:email_from)%><br>
-
-				</label>		
-			</div>
-			<div>
-				<label>Email to: <%= text_field_tag(:email_to)%></label>
-			</div>
-			<br>
-			<%= text_field_tag(:subject, @recipe.title) %><br>
-			<%= hidden_field_tag :recipe_id , @recipe.id %><br>
-			<%= submit_tag ("Email recipe") %><br>
-			<% end %>
-		</div>
-	</div>
+				<div class="share-form">
+					<div class="col-md-6">
+						<h2>SHARE RECIPE</h2>
+							<%= form_tag("/mail", method: :post) do %> <br>
+						<div>
+							<label>Email from: 
+								<%= text_field_tag(:email_from)%><br>
+							</label>		
+						</div>
+							<div>
+								<label>Email to: <%= text_field_tag(:email_to)%></label>
+							</div>
+							<br>
+						<%= text_field_tag(:subject, @recipe.title) %><br>
+						<%= hidden_field_tag :recipe_id , @recipe.id %><br>
+						<%= submit_tag ("Email recipe") %><br>
+						<% end %>
+					</div>
+				</div>
 </div>
 
 
