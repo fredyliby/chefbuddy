@@ -52,7 +52,7 @@ class RecipesController < ApplicationController
 	def mail
 		puts "EMAIL HERE"
 		puts params
-		# @img = ActiveSupport::Base64.encode64(@image)
+		
 
 
 		recipe = Recipe.find(params[:recipe_id])
@@ -61,18 +61,17 @@ class RecipesController < ApplicationController
 		subject = params[:subject]
 
 		html = "<html><h1>Hi <strong> #{to} </strong>, how are you? check this recipe out</h1> <br/> <ul>"
-
+			html+= "<li> <h4>INGREDIENTS</h4></li>"
 		recipe.ingredients.each do | i |
 			html+= "<li> #{i.name} </li>"
 		end
 
-		html += "</ul><br/><ul>"
-		
+		html+= "</ul><br/><ul>"
+		html+= "<li><h4>DIRECTIONS</h4></li>"
 		recipe.directions.each do | d |
 			html+= "<li> #{d.step} </li>"
 		end
-		# <img src="image_name">
-
+		
 
 		html+= "</ul><br/> <h1> Enjoy Cooking!</h1></html>"
 
