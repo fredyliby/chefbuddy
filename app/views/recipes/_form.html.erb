@@ -1,5 +1,4 @@
-  
-<!-- Form for a recipe? -->
+ <div class="container">
 <div id="errors">
 	<h2><%= pluralize(@recipe.errors.count, "error") %> prevented this recipe from saving </h2>	
 		<ul>
@@ -20,8 +19,8 @@
 				<%= f.simple_fields_for :ingredients do |ingredient| %>
 					<%= render 'ingredient_fields' , :f => ingredient  %>
 				<% end %>
-					<span class="links">
-					<%= link_to_add_association 'Add ingredient', f, :ingredients, class: "btn btn-default add-button" %>
+				<span class="links">
+			<%= link_to_add_association 'Add ingredient', f, :ingredients, class: "btn btn-default add-button" %>
 					</span>
 			</div><br>
 	</div>
@@ -32,7 +31,7 @@
 						<%= render 'direction_fields' , :f => direction  %>
 					<% end %>
 					<span class="links">
-						<%= link_to_add_association 'Add step', f, :directions, class: "btn btn-default add-button" %>
+					<%= link_to_add_association 'Add step', f, :directions, class: "btn btn-default add-button" %>
 					</span>
 				</div>
 			</div>													
@@ -41,5 +40,5 @@
 		<% end %>
 </div>			
 <br>	
-
+</div>
 

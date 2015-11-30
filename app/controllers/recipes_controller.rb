@@ -72,8 +72,10 @@ class RecipesController < ApplicationController
 			html+= "<li> #{d.step} </li>"
 		end
 		
-
 		html+= "</ul><br/> <h1> Enjoy Cooking!</h1></html>"
+		img= recipe.image.path
+			f = File.read(img)
+			@enc_image = Base64.encode64(f)
 
 		require 'mandrill'
 		msg = Mandrill::API.new
@@ -83,6 +85,7 @@ class RecipesController < ApplicationController
 			:text=> params[:directions],
 			:to=> [{:email=> to }],
 			:html=> html,
+			:attachments => [{"content" => @enc_image, "type" => "image/jpg", "name" => "recipe"}],
 			:from_email=> from
 		}
 		sending = msg.messages.send message 
