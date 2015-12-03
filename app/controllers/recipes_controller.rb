@@ -9,14 +9,17 @@ class RecipesController < ApplicationController
 	def show
 		@recipe = Recipe.find(params[:id])
 		@recipes = Recipe.all
-		@ingredient = Ingredient.all
-		@direction = Direction.all
+		@ingredients = Ingredient.all
+		@directions = Direction.all
+		# @description = Description.all
 	end
 
 
 	def new
 		@recipe = current_user.recipes.build
-		@ingredients = @recipe.ingredients.build		
+		@ingredient = @recipe.ingredients.build
+		@direction = @recipe.directions.build
+		# @description = @recipe.description.build		
 	end
 
 	def create
@@ -36,8 +39,11 @@ class RecipesController < ApplicationController
 	end
 
 	def update
+		puts "PARAMS!!!!"
+		puts recipe_params
 		if @recipe.update(recipe_params)
 			redirect_to @recipe
+			puts "UPDATED!!!!!"
 		else
 			render 'edit'
 		end
