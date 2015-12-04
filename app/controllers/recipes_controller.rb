@@ -18,8 +18,7 @@ class RecipesController < ApplicationController
 	def new
 		@recipe = current_user.recipes.build
 		@ingredient = @recipe.ingredients.build
-		@direction = @recipe.directions.build
-		# @description = @recipe.description.build		
+		@direction = @recipe.directions.build		
 	end
 
 	def create

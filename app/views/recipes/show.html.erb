@@ -1,14 +1,11 @@
 <div class="container">
+<div class="page-wrapper4">
 	<div class="row">
-		<div class="img-wrapper">
 			<div class="col-md-4">
 			  <div>
 				<h3><%= @recipe.title %></h3>
-				<%= link_to	(image_tag @recipe.image.url(:medium), class: "img-rounded",  size: '200x150') %>
-			  </div><br>
-		
-
-		</div>
+				<%= link_to	(image_tag @recipe.image.url(:medium), class: "img-rounded",  size: '300x150') %>
+			  </div>		
 		</div>
 			<div class="col-md-8">
 				<h3>Description</h3>
@@ -30,7 +27,7 @@
 			<h3>DIRECTIONS</h3>
 			<ul>
 				<% @recipe.directions.each do |direction| %>
-				<li> <%= direction.step %> </li>
+					<li> <%= direction.step %> </li>
 				<% end %>
 			</ul>
 		</div>
@@ -46,7 +43,7 @@
 	
 	<div class="share-form">
 		<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-12">
 		<h3>SHARE RECIPE</h3>
 			<%= form_tag("/mail", method: :post) do %><br>
 			<div>
@@ -64,9 +61,8 @@
 			</div>
 		</div>
 	</div>
-
-	
 	</div>
+</div>
 
 
 
