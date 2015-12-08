@@ -1,6 +1,7 @@
 ABOUT:
 
-  The Chefbuddy app is a recipe app that allows users to sign up, create  recipes,save and share recipe by email.
+  The Chefbuddy app is a recipe app that allows users to sign up, create  recipes,save and share recipe 
+  by email.
 
 TECHNOLOGIES USED:
   
