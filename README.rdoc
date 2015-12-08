@@ -5,7 +5,8 @@ ABOUT:
 TECHNOLOGIES USED:
   
       *FRONT-END: CSS3,Bootstrap-Saas
-      *BACK-END: Ruby, Ruby on Rails, API integration using Mandrill-Api, Ruby gems used include-Cocoon, Devise, Simple-form                  and paperclip
+      *BACK-END: Ruby, Ruby on Rails, API integration using Mandrill-Api, Ruby gems used include-Cocoon, Devise,
+                 Simple-form and paperclip
       
 FEATURES:
 
