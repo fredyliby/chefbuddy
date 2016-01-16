@@ -1,28 +1,26 @@
-== README
+=README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ABOUT:
 
-Things you may want to cover:
+  The Chefbuddy app is a recipe app that allows users to sign up, create  recipes,save and share recipe 
+  by email.
 
-* Ruby version
+TECHNOLOGIES USED:
+  
+      *FRONT-END: CSS3,Bootstrap-Saas
+      *BACK-END: Ruby, Ruby on Rails, API integration using Mandrill-Api, Ruby gems used include-Cocoon, Devise,
+                 Simple-form and paperclip
+      
+FEATURES:
 
-* System dependencies
+    *Create User account
+    *Create recipes and save
+    *Upload recipe images
+    *Share recipe with friends by email
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+
