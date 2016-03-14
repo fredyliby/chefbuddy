@@ -76,6 +76,7 @@ class RecipesController < ApplicationController
 		recipe.directions.each do | d |
 			html+= "<li> #{d.step} </li>"
 		end
+	
 		
 		html+= "</ul><br/> <h1> Enjoy Cooking!</h1></html>"
 		img= recipe.image.path
