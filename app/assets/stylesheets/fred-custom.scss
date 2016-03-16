@@ -1,0 +1,39 @@
+$main_color: #990100;
+$second_color: #B90504;
+$grey: #333333;
+$white: #E8E8E8;
+$cloud: #F6F6F6;
+
+@font-face {
+	font-family: 'libertine';    
+	src: url('LinLibertine_RB.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.nav-custom{
+	font-family: libertine;
+	background-color: $grey;
+	border-radius: 0;
+	border-style: none;
+	
+	#app-name{
+		color: $cloud;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: $cloud;
+	&:hover{
+		color: $second_color;
+	}
+}
+
+body{
+	font-family: libertine;
+	background-color: $second_color;
+}
+

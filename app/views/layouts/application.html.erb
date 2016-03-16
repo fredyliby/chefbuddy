@@ -7,30 +7,30 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<nav class="navbar navbar-default ">
+	<nav class="navbar navbar-default nav-custom">
 		<div class="container">	
 			<div class="navbar-brand">
-				<%= link_to "Chefbuddy", root_path %>
+				<%= link_to "Chefbuddy", root_path, id: "app-name" %>
 			</div>
-			<% if user_signed_in? %>
 			<ul class="nav navbar-nav navbar-right">
+				<% if user_signed_in? %>
+
 				<li>
 					<%= link_to "Recipe", new_recipe_path %>
 				</li>
 				<li>
 					<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 				</li>
-			</ul>
-			<% else %>
-			<ul class="nav navbar-nav navbar-right">
+				<% else %>
 				<li>
 					<%= link_to "Sign up", new_user_registration_path %>
 				</li>
 				<li>
 					<%= link_to "Sign in", new_user_session_path %>
 				</li>
+				<% end %>
+
 			</ul>
-			<% end %>
 		</div>
 	</nav>	 
 	<div class="container">	
