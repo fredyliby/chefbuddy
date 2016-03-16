@@ -16,7 +16,7 @@
 				<% if user_signed_in? %>
 
 				<li>
-					<%= link_to "Recipe", new_recipe_path %>
+					<%= link_to "New Recipe", new_recipe_path %>
 				</li>
 				<li>
 					<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>

@@ -1,3 +1,4 @@
+require "open-uri"
 class Recipe < ActiveRecord::Base
 	belongs_to :user
 	has_many :ingredients
@@ -10,5 +11,10 @@ class Recipe < ActiveRecord::Base
 	allow_destroy: true
 	validates :title, :description, :image, presence: true
 	has_attached_file :image, styles: { medium: "300x200#", large: "500x400" }
-    validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+
+	def picture_from_url(url)
+		self.picture = open(url)
+	end
 end

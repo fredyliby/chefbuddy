@@ -57,9 +57,6 @@ class RecipesController < ApplicationController
 	def mail
 		puts "EMAIL HERE"
 		puts params
-		
-
-
 		recipe = Recipe.find(params[:recipe_id])
 		from = params[:email_from]
 		to = params[:email_to]
@@ -104,8 +101,6 @@ private
 	def recipe_params
 		params.require(:recipe).permit(:title, :description, :image, ingredients_attributes: [:id, :name, :_destroy],
 						directions_attributes: [:id, :step, :_destroy])				
-
-
 	end
 
 	def find_recipe
