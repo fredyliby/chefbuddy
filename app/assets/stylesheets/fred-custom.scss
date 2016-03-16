@@ -11,6 +11,15 @@ $cloud: #F6F6F6;
 	font-style: normal;
 }
 
+body{
+	font-family: libertine;
+	background-color: $second_color;
+	h1{
+		font-family: libertine;
+
+	}
+}
+
 .nav-custom{
 	font-family: libertine;
 	background-color: $grey;
@@ -32,8 +41,30 @@ $cloud: #F6F6F6;
 	}
 }
 
-body{
-	font-family: libertine;
-	background-color: $second_color;
+
+
+.menu-item{
+	/*padding: 0;*/
+	padding-top: 50px;
 }
 
+h1 {
+    text-align: center;
+    font-size: 35px;
+    /*font-family: Verdana;*/
+    /*text-shadow: 0 1px 0 #999999, 0 2px 0 #888888,*/
+/*    0 3px 0 #777777, 0 4px 0 #666666,
+    0 5px 0 #555555, 0 6px 0 #444444,
+    0 7px 0 #333333, 0 8px 7px rgba(0, 0, 0, 0.4),
+    0 9px 10px rgba(0, 0, 0, 0.2);*/
+    background-color:$main_color;
+    color: $cloud;
+    border:2px solid #fff; 
+    border-bottom-width:1px;
+    padding-bottom:10px;
+    padding-top:10px;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
