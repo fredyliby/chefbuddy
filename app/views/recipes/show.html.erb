@@ -1,19 +1,19 @@
 	<div class="container">
 		<div class="page-wrapper4">
 		  <div class="row">
-				<div class="col-md-6">
+				<div class="col-sm-4">
 					<div>
 						<h3><%= @recipe.title %></h3>
 						<%= link_to	(image_tag @recipe.image.url(:medium), class: "img-rounded",  size: '300x150') %>
 					</div>
 				</div>		
-			<div class="col-md-6">
+			<div class="col-sm-8">
 				<h3>Description</h3>
 				<p><%= @recipe.description %></p>				
 			</div>
 		  </div>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<div>
 					<h3>INGREDIENTS</h3>
 					<ul>
@@ -23,7 +23,7 @@
 					</ul>
 				</div>				
 			</div>
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<h3>DIRECTIONS</h3>
 				<ul>
 					<% @recipe.directions.each do |direction| %>
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-sm-12">
 				<%= link_to "Back", root_path, class: "btn btn-default" %>
 				<%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-default" %>
 				<%= link_to "Delete", recipe_path(@recipe), method: :delete, data: {confirm: "Are you sure?" },  
