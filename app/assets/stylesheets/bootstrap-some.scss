@@ -29,10 +29,10 @@
   .form-login {
     background-color: #EDEDED;
     padding-top: 5px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
     border-color:#d2d2d2;
     border-width: 5px;
     box-shadow:0 1px 0 #cfcfcf;
@@ -48,11 +48,11 @@ h4 {
 
 .form-Signup {
     background-color: #EDEDED;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
     border-color:#d2d2d2;
     border-width: 5px;
     box-shadow:0 1px 0 #cfcfcf;
@@ -62,20 +62,20 @@ h4 {
 h2 { 
    border:0 solid #fff; 
    border-bottom-width:1px;
-   padding-bottom:10px;
+   padding-bottom:5px;
    text-align: center;
 }
 
 .wrapper {
 	background-color:#F5F7F7;
 	width:75%;
-	border-radius: 65px;
+	// border-radius: 65px;
     border-color:#d2d2d2;
     box-shadow:0 1px 0 #cfcfcf;
-    border: solid 2px #000000;
+    border: solid 1px #000000;
     margin: 0 auto;
-    padding-bottom: 15px;
-    padding-top:15px;
+    padding-bottom: 10px;
+    padding-top:10px;
     padding-right:50px;
     padding-left:50px;
     
@@ -83,16 +83,16 @@ h2 {
 }
 .page-wrapper {
 	background-color:#F5F7F7;
-	width:75%;
-  border-radius: 75px;
+	width:50%;
+  // border-radius: 75px;
   border-color:#d2d2d2;
   box-shadow:0 1px 0 #cfcfcf;
-  border: solid 2px #000000;
+  border: solid 1px #000000;
   margin: 0 auto;
-  padding-bottom: 15px;
-  padding-top:15px;
-  padding-right:50px;
-  padding-left:40px;
+  padding-bottom: 5px;
+  padding-top:5px;
+  padding-right:30px;
+  padding-left:30px;
 
 
 }
@@ -154,10 +154,10 @@ h2 {
    background-color: #EDEDED;
    width:95%;
    margin:5px;
-   padding-right:20px;
-   padding-left:20px;
-   padding-top:  25px;
-   padding-bottom:20px;  
+   padding-right:10px;
+   padding-left:10px;
+   padding-top: 10px;
+   padding-bottom:10px;  
    border-width: 5px;
 
 }
@@ -168,6 +168,6 @@ h2 {
    
 }
 .container {
-  margin-top: 2px;
+  padding-top:2px;
 }
 
