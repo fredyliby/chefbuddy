@@ -1,3 +1,4 @@
+require "open-uri"
 class RecipesController < ApplicationController
 	before_action :find_recipe, only: [:show,:edit,:update,:destroy]
 	before_action :authenticate_user!, except: [:index, :show]
@@ -76,8 +77,8 @@ class RecipesController < ApplicationController
 	
 		
 		html+= "</ul><br/> <h1> Enjoy Cooking!</h1></html>"
-		img= recipe.image.path
-			f = File.read(img)
+		img= recipe.image.url
+			f = File.read(open(img))
 			@enc_image = Base64.encode64(f)
 
 		require 'mandrill'
